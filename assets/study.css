@@ -44,6 +44,11 @@ a:hover { text-decoration-thickness: 2px; }
 .byline { color: var(--muted); }
 .handoff { color: #f5f9ed; padding: clamp(28px,3vw,48px); background-color: var(--forest); background-image: radial-gradient(#335749 .8px, transparent .9px); background-size: 15px 15px; }
 .handoff figcaption { margin-bottom: 26px; color: #dfefdb; }
+.journey-person { display: flex; align-items: center; gap: 15px; padding-bottom: 18px; border-bottom: 1px solid #618174; }
+.journey-person > svg { flex: 0 0 46px; color: var(--mint); }
+.journey-person b { display:block; font: 500 20px/1.3 var(--sans); color:var(--paper); }
+.journey-person span span { display:block; margin-top:4px; font:15px/1.45 var(--sans); }
+.journey-next { display:inline-block; margin-top:20px; color:var(--mint); font-size:15px; }
 .milestones { padding: 0; list-style: none; }
 .milestones li { position: relative; padding-left: 32px; }
 .milestones li + li { margin-top: 29px; }
@@ -88,6 +93,13 @@ svg.lucide { width: 18px; height: 18px; vertical-align: -.18em; flex-shrink: 0; 
 .evidence figcaption strong { font-size:17px; font-weight:600; }
 .evidence figcaption p, .article .evidence figcaption p { margin:3px 0 0; font-size:16px; line-height:1.5; }
 .chapter blockquote { margin:24px 0; background: #dbe8d9; border-left:3px solid #467455; padding: 18px 24px; font-size:clamp(20px,2vw,28px); letter-spacing:-.02em; line-height:1.38; }
+.email-sample { background:var(--paper); border:1px solid var(--line); margin:24px 0; }
+.email-sample figcaption { display:flex; align-items:center; gap:10px; padding:12px 20px; background:#dbe8d9; color:var(--forest); font:13px/1.5 var(--mono); }
+.email-meta { display:grid; grid-template-columns:64px minmax(0,1fr); gap:8px 15px; margin:0 20px; padding:18px 0; border-bottom:1px solid var(--line); }
+.email-meta dt { color:var(--muted); font:13px/1.8 var(--mono); }
+.email-meta dd { margin:0; font-size:16px; }
+.email-body { max-width:66ch; padding:18px 20px 22px; }
+.email-body p + p { margin-top:12px; }
 .decision-list { margin:20px 0; display:grid; grid-template-columns:minmax(135px, .8fr) 1.65fr; }
 .decision-list dt, .decision-list dd { border-top:1px solid var(--line); padding:12px 0; }
 .decision-list dt { padding-right:16px; font-weight:600; }

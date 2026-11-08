@@ -49,11 +49,18 @@
         <p class="byline">Independent product case study</p>
       </div>
       <figure class="handoff">
-        <figcaption>Two milestones in domain setup</figcaption>
+        <figcaption class="journey-person">
+          <svg viewBox="0 0 48 48" width="48" height="48" aria-hidden="true" focusable="false" fill="currentColor">
+            <circle cx="24" cy="15" r="8"/>
+            <path d="M7 41c0-10 7.2-16 17-16s17 6 17 16z"/>
+          </svg>
+          <span><b>First-time domain owner</b><span>Wants to leave setup and know when the site is connected.</span></span>
+        </figcaption>
         <ol class="milestones">
           <li><span class="provider">Name.com</span><strong>Saved</strong><p>If the six saved records match Squarespace’s list, you can leave Name.com.</p></li>
           <li><span class="provider">Squarespace</span><strong>Connected</strong><p>Squarespace has verified that the domain is linked to your site.</p></li>
         </ol>
+        <a class="journey-next" href="#email">See the proposed confirmation email <span aria-hidden="true">↓</span></a>
       </figure>
     </section>
     <div class="study" id="study"><div class="shell narrative">
@@ -107,7 +114,23 @@
   <path d="M12 5v16" />
   <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" />
 </svg>
-<span>Choose the change</span></a><a href="#research"><svg aria-hidden="true" focusable="false"
+<span>Choose the change</span></a><a href="#email"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-mail-check"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" />
+  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+  <path d="m16 19 2 2 4-4" />
+</svg>
+<span>Confirm by email</span></a><a href="#research"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-flask-conical"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -194,7 +217,6 @@
     <h2>Start with the help article</h2>
     <p>A clearer article is the smallest change I can test with the published workflow. I moved the overwrite warning ahead of the save action, then gave readers a stopping rule:</p>
     <blockquote>If the six saved website records match the ones in Squarespace, you can close Name.com. Check the connection in Squarespace later.</blockquote>
-    <p>I also considered a “your site is connected” email. Sending it after a successful save could reassure someone too early. I’d ask Engineering whether Name.com can detect final verification before offering that notification.</p>
     <a class="action" href="./guide.html">Read the revised guide <svg aria-hidden="true" focusable="false"
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -211,6 +233,35 @@
   <path d="m12 5 7 7-7 7" />
 </svg>
 </a>
+  </section>
+  <section class="chapter" id="email">
+    <h2>Let the owner leave the tab</h2>
+    <p>The guide gives the owner permission to leave, but checking back still takes effort. I’d offer an optional “Email me when it’s connected” choice after the records are saved. Here’s what I’d send when Squarespace confirms the connection.</p>
+    <figure class="email-sample">
+      <figcaption><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-mail-check"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" />
+  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+  <path d="m16 19 2 2 4-4" />
+</svg>
+<span>Proposed confirmation email</span></figcaption>
+      <dl class="email-meta"><dt>To</dt><dd>Alex <dd>The domain owner who opted in</dd>lt;alex@example.net<dd>The domain owner who opted in</dd>gt;</dd><dt>Subject</dt><dd><strong>studio.example is connected to your Squarespace site</strong></dd></dl>
+      <div class="email-body">
+        <p>Squarespace has verified the connection for <b>studio.example</b>. You’ve finished domain setup and can close any setup tabs you still have open.</p>
+        <p>You can see the <b>Connected</b> status in your Squarespace Domains panel whenever you need it.</p>
+      </div>
+    </figure>
+    <p><strong>What would trigger it?</strong> I’d first ask Engineering whether Name.com can receive a reliable verification signal from Squarespace. If it can, send one email per verified connection to an owner who opted in. A save, a failed check, or elapsed time alone would never trigger it. If verification is unavailable, the alternative is an explicitly labeled reminder to check.</p>
   </section>
   <section class="chapter" id="research">
     <h2>Test what people think happened</h2>
