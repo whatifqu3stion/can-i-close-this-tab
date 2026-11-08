@@ -13,20 +13,21 @@
   <main id="main">
     <div class="shell guide-layout">
       <aside class="guide-rail"><div class="rail-content"><nav aria-label="Guide contents"><span>On this page</span>
-        <a href="#before">Before you start</a><a href="#start">Get the records</a><a href="#key">Copy the key and save</a><a href="#check">Can I close the tab?</a><a href="#connection">Confirm the connection</a></nav>
+        <a href="#before">Before you start</a><a href="#start">Get the records</a><a href="#key">Copy the key and save</a><a href="#check">Check your saved settings</a><a href="#connection">Confirm the connection</a></nav>
         <section class="guide-changes" aria-labelledby="changes-title">
-          <h2 id="changes-title">Change log</h2>
+          <h2 id="changes-title">What changed in this guide</h2>
           <time datetime="2026-11-08">8 November 2026</time>
           <ul>
-            <li>Added the <a href="#start">Squarespace record list</a> and a wider view of the <a href="#key">Name.com template</a>.</li>
-            <li>Added checks for the verification key and <a href="#check">when to close Name.com</a>.</li>
+            <li>Each step names the site you need. <a href="#key">Labeled screenshots</a> show which value to copy and where to paste it.</li>
+            <li>The overwrite warning comes before Save, while you can still review what will change.</li>
+            <li><a href="#check">After saving</a>, you can see what counts as done, what to fix if a record differs, and where to check next.</li>
           </ul>
         </section></div></aside>
       <article class="article lesson">
         <a class="backlink" href="./index.html#proposal">← Case study</a>
         <h1>Connect your Name.com domain to Squarespace</h1>
-        <p class="lesson-intro">You’ll copy a verification key between two tabs, save the records, and check when you can close Name.com. Squarespace confirms the connection separately.</p>
-        <p><a href="#check">Already saved? Check whether you can close Name.com ↓</a></p>
+        <p class="lesson-intro">You’ll get your site’s settings from Squarespace and save them in Name.com. Once the saved records match, your part in Name.com is done. Squarespace is where you’ll see when your site is connected.</p>
+        <p><a href="#check">Already saved? Check that your setup is complete ↓</a></p>
         <section class="prereq" id="before">
           <h2>Before you start</h2>
           <p>Use this guide if Name.com manages your DNS. If another provider manages it, enter Squarespace’s records there. <a href="https://cs.name.com/hc/en-us/articles/205934547-Changing-nameservers-for-DNS-management">Check who manages your DNS</a>.</p>
@@ -72,11 +73,11 @@
           </figure>
         </section>
         <section class="lesson-step" id="check">
-          <h2>3. Decide whether you can close Name.com</h2>
-          <p>Compare the two CNAME records and four A records with the values in your Squarespace tab. Your domain can also have records for other services.</p>
-          <div class="self-check"><h3>Do all six saved website records match Squarespace’s list?</h3>
-            <p><b>Yes.</b> You’ve finished your part in Name.com. You can close that tab and check progress in Squarespace later.</p>
-            <p><b>No.</b> Keep both tabs open. Compare the missing or different entry with your own Squarespace list. <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">See the record-by-record guide</a>.</p>
+          <h2>3. Check that your Name.com setup is complete</h2>
+          <p>In Name.com, find the two CNAME records and four A records for your website. Compare their names and values with the six entries in your Squarespace tab. Leave records for other services as they are.</p>
+          <div class="self-check"><h3>What do your saved records show?</h3>
+            <p><b>All six match.</b> Your Name.com setup is complete. It’s safe to close the Name.com tab. You can <a href="#connection">check the connection in Squarespace</a> later.</p>
+            <p><b>A record is missing or different.</b> Keep both tabs open. Use your Squarespace list to correct that entry in Name.com, then check it again. <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">See the record-by-record guide</a>.</p>
           </div>
           <p><b>Saw a save error?</b> Check what was saved before retrying. If a change is missing, follow the error message and retry that change.</p>
         </section>
