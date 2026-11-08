@@ -233,7 +233,7 @@
   </section>
   <section class="chapter" id="email">
     <h2>Let the owner leave the tab</h2>
-    <p>The guide gives the owner permission to leave, but checking back still takes effort. I’d offer an optional “Email me when it’s connected” choice after the records are saved. Here’s what I’d send when Squarespace confirms the connection.</p>
+    <p>After saving, an owner could choose “Email me when it’s connected” and close the tab. I’d send this message once Squarespace confirms the connection.</p>
     <figure class="email-sample">
       <figcaption><svg aria-hidden="true" focusable="false"
   class="lucide lucide-mail-check"
@@ -250,15 +250,25 @@
   <path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" />
   <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
   <path d="m16 19 2 2 4-4" />
-</svg>
-<span>Proposed confirmation email</span></figcaption>
-      <dl class="email-meta"><dt>To</dt><dd>Alex <dd>The domain owner who opted in</dd>lt;alex@example.net<dd>The domain owner who opted in</dd>gt;</dd><dt>Subject</dt><dd><strong>studio.example is connected to your Squarespace site</strong></dd></dl>
-      <div class="email-body">
-        <p>Squarespace has verified the connection for <b>studio.example</b>. You’ve finished domain setup and can close any setup tabs you still have open.</p>
-        <p>You can see the <b>Connected</b> status in your Squarespace Domains panel whenever you need it.</p>
+</svg><span>Proposed confirmation email</span></figcaption>
+      <div class="email-letter">
+        <div class="email-envelope">
+          <h3>studio.example is connected</h3>
+          <p><span>To</span> Alex &lt;alex@example.net&gt;</p>
+        </div>
+        <div class="email-body">
+          <p>Hi Alex,</p>
+          <p>Squarespace has confirmed that <strong>studio.example</strong> is connected to your site. Your setup is complete.</p>
+          <p>Thanks for choosing Name.com for your domain.</p>
+          <p class="email-signature">The Name.com team</p>
+        </div>
+        <div class="email-help">
+          <strong>Site still won’t open?</strong>
+          <p>Check the domain’s status in your Squarespace Domains panel. <a href="https://support.squarespace.com/hc/en-us/articles/206541757-Troubleshooting-third-party-domain-connections">Troubleshoot the connection</a>.</p>
+        </div>
       </div>
     </figure>
-    <p><strong>What would trigger it?</strong> I’d first ask Engineering whether Name.com can receive a reliable verification signal from Squarespace. If it can, send one email per verified connection to an owner who opted in. A save, a failed check, or elapsed time alone would never trigger it. If verification is unavailable, the alternative is an explicitly labeled reminder to check.</p>
+    <p><strong>Send condition.</strong> I’d ask Engineering whether Name.com can detect Squarespace’s verified status. If it can, send one confirmation per connection to an owner who opted in. A timer alone could support a reminder to check.</p>
   </section>
   <section class="chapter" id="research">
     <h2>Test what people think happened</h2>
