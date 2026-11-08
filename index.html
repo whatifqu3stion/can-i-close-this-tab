@@ -1,15 +1,246 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#193d36"><title>Can I close this tab? · J’s product case study</title>
-<link rel="stylesheet" href="./assets/study.css"></head><body>
-<a class="skip" href="#main">Skip to case study</a>
-<header class="wrap mast"><span class="signature"><b aria-hidden="true">J</b>Product notes</span><nav aria-label="Site"><a href="#study">Case study</a><button class="linkbtn" data-dialog="guide">Read the guide</button></nav></header>
-<main id="main">
-<section class="hero" aria-labelledby="title"><div class="wrap figure"><div class="figurehead"><p>Domain connection handoff</p><p>Name.com → Squarespace</p></div><div class="line" aria-label="Two milestones in domain setup"><div class="node"><small>Name.com</small><strong>Saved</strong><span>DNS records have been saved.</span></div><div class="node"><small>Squarespace</small><strong>Connected</strong><span>The site connection is verified.</span></div></div></div>
-<div class="cover"><div><p class="role">Independent product case study by J</p><h1 id="title">Can I close<br> this tab?</h1></div><div><p class="deck">A first-time domain owner can finish their part before their site is connected. How should the guide tell them when it’s safe to leave?</p><div class="actions"><a class="cta" href="#study">Explore the case study <span aria-hidden="true">↓</span></a><button class="linkbtn under" data-dialog="guide">Read the guide</button></div></div></div></section>
-<section id="study" class="wrap casebody" aria-labelledby="outline"><div class="indexintro"><h2 id="outline">Inside the case study</h2><p>Evidence and decisions</p></div>
-<details class="fold"><summary><strong>The customer task</strong><span>Problem framing</span><i aria-hidden="true"></i></summary><div class="inner"><p>A first-time owner wants their domain to open their existing Squarespace site. My question was narrower: once the records are saved, can they tell whether they can leave Name.com and where to check next?</p><p>The provider guides document the handoff. Whether customers find it confusing still needs testing.</p></div></details><details class="fold"><summary><strong>What the workflow shows</strong><span>Discovery and technical fluency</span><i aria-hidden="true"></i></summary><div class="inner"><p>Name.com previews the DNS changes. Squarespace supplies the verification code and confirms the final connection. Its guide calls the source column <b>Name</b>, while its published screenshot uses <b>Host</b>. The destination field at Name.com is <b>Verification Key</b>.</p><p>I inspected the signed-in menus and the public guides. My account had no domain, so the DNS editor evidence comes from the providers’ published examples.</p><button class='linkbtn under' data-dialog='sources'>Inspect the sources</button></div></details><details class="fold"><summary><strong>Why start with the article?</strong><span>Scope and prioritization</span><i aria-hidden="true"></i></summary><div class="inner"><p>An article can show which value to copy and when it is safe to close the tab using information the providers already publish. A completion notification would require a reliable signal that the other service has verified the domain.</p><p>I scoped the first release to one provider and one help article. I’d revisit the in-product confirmation if people save correctly but still believe their site is already connected.</p></div></details><details class="fold"><summary><strong>The proposed experience</strong><span>Requirements and handoff</span><i aria-hidden="true"></i></summary><div class="inner"><p><b>User story.</b> As a first-time owner, I want to know what happened after saving and whether I need to return, so I can leave setup with confidence.</p><ul><li>A failed save explains how to check what was retained before retrying.</li><li>After the saved records match, the guide says the customer can close Name.com and check status later in Squarespace.</li><li>Connected appears only when Squarespace verifies the connection.</li></ul><button class='linkbtn under' data-dialog='guide'>Read the proposed article</button><p class='media-note'>Walkthrough placeholder · Copy the verification key<br>The written instructions stand on their own.</p></div></details><details class="fold"><summary><strong>How I would test it</strong><span>Research and measurement plan</span><i aria-hidden="true"></i></summary><div class="inner"><p>Give a first-time owner the published instructions and a fictional setup. Observe which value they submit. After saving, ask: “If you close the laptop now, what happens next?”</p><p>If people confuse the code and destination, compare a paired-field example with the existing text. If they enter it correctly but assume the site is connected, revise the confirmation. If both tasks go smoothly, keep the existing guidance.</p><p><b>Proposed PostHog measure:</b> correct first submissions divided by attempts with a submission. Report starts without a submission separately. The follow-up answer tests understanding; a click alone does not establish it.</p></div></details><details class="fold"><summary><strong>What I would hand to the team</strong><span>Release and follow-up</span><i aria-hidden="true"></i></summary><div class="inner"><p>Design gets the three states and their copy. Engineering gets the open question about which verification signal is available. Support gets the question I’d ask about actual post-save contacts.</p><p>Before release I’d check recovery, keyboard use, text-only completion, and whether screenshots still match provider labels. The case study presents a prototype and research plan; customer outcomes have yet to be measured.</p></div></details>
-</section></main>
-<footer class="foot"><div class="wrap"><span>Independent work by J · Product management portfolio</span><button class="linkbtn under" data-dialog="sources">Provider sources</button></div></footer>
-<dialog id="guide" aria-labelledby="guidetitle"><div class="dheader">Independent guide <button type="button" class="close">Close</button></div><article class="doc"><h2 id="guidetitle">Connect your Name.com domain to Squarespace</h2><p><em>Independent help article drafted for a product case study.</em></p><p>You’ll use two tabs. Squarespace gives you the details for your site. Name.com is where you save them. Once the saved records match what Squarespace expects, you can close Name.com. You can check the connection in Squarespace later.</p><h3>Before you start</h3><p>This guide is for a domain whose DNS records are managed by Name.com. If Name.com tells you the domain uses another provider’s nameservers, use the records Squarespace gives you at that provider. <a href="https://cs.name.com/hc/en-us/articles/205934547-Changing-nameservers-for-DNS-management">Check who manages your DNS</a>.</p><h3>1. Start in Squarespace</h3><p>Open your site’s <strong>Domains</strong> panel and choose <strong>Use a domain I own</strong>. Enter your domain, choose <strong>Connect domain</strong>, and select <strong>Name.com</strong> as your provider. Continue until Squarespace shows the DNS records for your domain. Leave that tab open.</p><h3>2. Copy the verification key into Name.com</h3><p>Open Name.com in a second tab. From <strong>My Domains</strong>, choose the domain you entered in Squarespace. Open <strong>Manage DNS Records</strong>, select <strong>Show DNS Templates</strong>, and choose <strong>Squarespace.com</strong>.</p><p>Return to the Squarespace tab. Find the row that points to <code>verify.squarespace.com</code>. Copy the letters and numbers in that row’s <strong>Name</strong> column (labeled <strong>Host</strong> in the published screenshot). That code is your verification key. Use the code from your own account.</p><table><tr><th>Where to look</th><th>What to do</th></tr><tr><td>Squarespace · <strong>Name</strong> or <strong>Host</strong></td><td>Copy the unique code provided for your domain.</td></tr><tr><td>Name.com · <strong>Verification Key</strong></td><td>Paste your code here. Leave the template open for review.</td></tr></table><p><strong>Before saving</strong>, review the website records the template proposes. Applying it can replace existing records. If you see a conflict or don’t recognize an existing record, check its purpose before proceeding. Keep the records your email service uses. When the preview looks right, select <strong>Update DNS Records</strong>.</p><h3>3. Check the saved records before you close the tab</h3><p>Compare the saved website records in Name.com with the records in your Squarespace tab. The template sets up six records for the connection. Your domain may also have records for other services, including email.</p><p><strong>Do the website records match?</strong> You’ve finished the Name.com step. You can close that tab while Squarespace checks the connection.</p><p><strong>Saw a save error?</strong> Check the saved record list before retrying. If the change is missing, follow the error message and try again. If the records already match, continue to Squarespace.</p><p><strong>Something doesn’t match?</strong> Compare that entry with the value shown for your own site in Squarespace. The <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">record-by-record guide</a> explains how to handle a conflict.</p><h3>4. Check the connection in Squarespace</h3><p>Squarespace says the connection can take <strong>24–48 hours</strong>. When you want an update, return to your domain’s DNS settings in Squarespace and select <strong>Refresh records</strong>.</p><ul><li><strong>Connected</strong> in the Domains panel means Squarespace has verified the connection. You’re done with this setup.</li><li><strong>Still pending after 48 hours?</strong> Use Squarespace’s DNS checker to identify which record needs attention. <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Troubleshoot the connection</a>.</li></ul><h3>Provider guides</h3><p><a href="https://www.name.com/support/articles/206127137-adding-dns-records-and-templates">Name.com · Adding DNS records and templates</a> · <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Squarespace · Connecting a Name.com domain</a></p></article></dialog>
-<dialog id="sources" aria-labelledby="sourcetitle"><div class="dheader">Study references <button type="button" class="close">Close</button></div><div class="doc"><h2 id="sourcetitle">Provider sources</h2><p>The public documentation establishes the steps. The study’s customer difficulty and proposed changes are hypotheses.</p><ul><li><a href="https://www.name.com/support/articles/206127137-adding-dns-records-and-templates">Name.com · Adding DNS records and templates</a></li><li><a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Squarespace · Connect a Name.com domain</a></li></ul></div></dialog>
-<script src="./assets/study.js"></script></body>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#153c32">
+  <meta name="description" content="An independent product case study about helping first-time domain owners know when their part is done.">
+  <title>Can I close this tab? · J’s product notes</title>
+  <link rel="stylesheet" href="./assets/study.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="shell mast">
+    <a class="identity" href="./index.html"><span class="monogram" aria-hidden="true">J</span>Product notes</a>
+    <nav aria-label="Main navigation">
+      <a href="./index.html" aria-current="page">Case study</a>
+      <a href="./guide.html">Revised guide</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="shell hero">
+      <div class="lead">
+        <h1>Can I close<br> this tab?</h1>
+        <p class="deck">You’ve saved your domain settings in Name.com. Squarespace is still checking the connection. Can you leave, or is there something else to do?</p>
+        <div class="actions"><a class="action" href="./guide.html">Read the revised guide <svg aria-hidden="true" focusable="false"
+  class="lucide lucide-arrow-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg>
+</a><a class="quiet" href="#study">Follow the process <svg aria-hidden="true" focusable="false"
+  class="lucide lucide-arrow-down"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 5v14" />
+  <path d="m19 12-7 7-7-7" />
+</svg>
+</a></div>
+        <p class="byline">Independent product case study by J</p>
+      </div>
+      <figure class="handoff">
+        <figcaption>The domain handoff</figcaption>
+        <ol class="milestones">
+          <li><span class="provider">Name.com</span><strong>Saved</strong><p>Check that the six website records match. If they do, you can close Name.com.</p></li>
+          <li><span class="provider">Squarespace</span><strong>Connected</strong><p>This label confirms your domain is linked to your site.</p></li>
+        </ol>
+      </figure>
+    </section>
+    <div class="study" id="study"><div class="shell narrative">
+  <aside class="toc"><nav aria-label="Case study chapters"><h2>In this study</h2><a href="#task"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-route"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <circle cx="6" cy="19" r="3" />
+  <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15" />
+  <circle cx="18" cy="5" r="3" />
+</svg>
+<span>Frame the problem</span></a><a href="#evidence"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-scan-search"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M3 7V5a2 2 0 0 1 2-2h2" />
+  <path d="M17 3h2a2 2 0 0 1 2 2v2" />
+  <path d="M21 17v2a2 2 0 0 1-2 2h-2" />
+  <path d="M7 21H5a2 2 0 0 1-2-2v-2" />
+  <circle cx="12" cy="12" r="3" />
+  <path d="m16 16-1.9-1.9" />
+</svg>
+<span>Inspect the handoff</span></a><a href="#proposal"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-book-open"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M12 5v16" />
+  <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" />
+</svg>
+<span>Choose the change</span></a><a href="#research"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-flask-conical"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M14 2v6a2 2 0 0 0 .245.96l5.51 10.08A2 2 0 0 1 18 22H6a2 2 0 0 1-1.755-2.96l5.51-10.08A2 2 0 0 0 10 8V2" />
+  <path d="M6.453 15h11.094" />
+  <path d="M8.5 2h7" />
+</svg>
+<span>Plan the test</span></a><a href="#handoff"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-clipboard-check"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+  <path d="m9 14 2 2 4-4" />
+</svg>
+<span>Prepare the handoff</span></a></nav></aside>
+  <div class="story">
+  <section class="chapter" id="task">
+    <h2>When is my part done?</h2>
+    <p>A first-time domain owner wants their new address to open their Squarespace site. They save their DNS records at Name.com, but the site can still be waiting for verification.</p>
+    <p>I focused on the moment after saving. Can the person tell whether they can close the tab, what’s still pending, and which service to check later?</p>
+  </section>
+  <section class="chapter" id="evidence">
+    <h2>One code, two interfaces</h2>
+    <p>I followed the published instructions and inspected the signed-in Name.com menus. My account had no domain, so the DNS editor evidence comes from the providers’ help-center screenshots. These images document the workflow; customer difficulty remains a hypothesis.</p>
+    <div class="pair"><figure class="evidence source">
+      <div class="plate-head"><span>Squarespace</span><a href="https://support.squarespace.com/hc/article_attachments/29511641419021" aria-label="Open the full published Squarespace screenshot">Full image <svg aria-hidden="true" focusable="false"
+  class="lucide lucide-arrow-up-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg>
+</a></div>
+      <div class="plate"><div class="crop"><img src="./assets/source-detail.webp" width="727" height="124" alt="Squarespace’s published DNS table. Its first row pairs a unique Host value with verify.squarespace.com."><span class="mark" aria-hidden="true"></span></div></div>
+      <figcaption><strong>Find the code</strong><p>Find the row pointing to <code>verify.squarespace.com</code>. The unique code is under <b>Host</b> in this screenshot. The written guide calls the column <b>Name</b>.</p></figcaption>
+    </figure><figure class="evidence field">
+      <div class="plate-head"><span>Name.com</span><a href="https://support.squarespace.com/hc/article_attachments/44214864635917" aria-label="Open the full published Name.com screenshot">Full image <svg aria-hidden="true" focusable="false"
+  class="lucide lucide-arrow-up-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M7 7h10v10" />
+  <path d="M7 17 17 7" />
+</svg>
+</a></div>
+      <div class="plate"><div class="crop"><img src="./assets/field-detail.webp" width="535" height="213" alt="Name.com’s Squarespace preset with the Verification Key field outlined in blue."><span class="mark" aria-hidden="true"></span></div></div>
+      <figcaption><strong>Paste into Verification Key</strong><p>This field takes the code from the other tab. The two published screenshots use different example domains, so the codes shown here differ.</p></figcaption>
+    </figure></div>
+    <p>The template already does useful work: it prepares six website records at once. The instructions still ask the reader to identify the right value in one tab and recognize it under a different label in the next.</p>
+  </section>
+  <section class="chapter" id="proposal">
+    <h2>Start with the help article</h2>
+    <p>An article can identify the code, explain the save preview and give the reader a clear stopping point. It uses information the providers already publish. A completion email would require a reliable signal that Squarespace had verified the domain.</p>
+    <blockquote>If the six saved website records match the ones in Squarespace, you can close Name.com. Check the connection in Squarespace later.</blockquote>
+    <p><strong>User story.</strong> As a first-time owner, I want to know whether I’ve finished my part and where to check next, so I can leave setup with confidence.</p>
+    <a class="action" href="./guide.html">Read the revised guide <svg aria-hidden="true" focusable="false"
+  class="lucide lucide-arrow-right"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M5 12h14" />
+  <path d="m12 5 7 7-7 7" />
+</svg>
+</a>
+  </section>
+  <section class="chapter" id="research">
+    <h2>Test what people think happened</h2>
+    <p>I’d give a first-time owner the existing instructions and a fictional setup, observe which value they submit, and ask: “If you closed the laptop now, what would you expect to happen?”</p>
+    <dl class="decision-list">
+      <dt>Wrong value entered</dt><dd>Compare the existing instructions with a paired-field example. Test whether people can find the code without coaching.</dd>
+      <dt>Correct save, wrong expectation</dt><dd>Revise the post-save explanation and ask where they would check the final status.</dd>
+      <dt>Both steps understood</dt><dd>Keep the current guidance and investigate another step.</dd>
+    </dl>
+    <p><strong>Proposed PostHog measure:</strong> the share of first submissions containing the correct code. Report starts with no submission separately. To assess understanding, use the participant’s explanation of what happens next.</p>
+  </section>
+  <section class="chapter" id="handoff">
+    <h2>What the team needs to ship</h2>
+    <p>The acceptance criteria cover three outcomes. A save error asks the reader to check what was retained before retrying. A matching record list means they can leave Name.com. Only Squarespace’s verified status establishes that the domain is connected.</p>
+    <p><strong>For Engineering:</strong> which events confirm a successful save and a verified connection? <strong>For Support:</strong> what do customers actually ask after saving?</p>
+    <p>Before release, I’d check recovery, keyboard access, text-only completion and current field labels. The study includes a proposed research plan; customer outcomes have yet to be measured.</p>
+  </section>
+  </div></div></div>
+    <section class="shell sources" id="sources"><h2>Provider sources</h2><div>
+    <a href="https://www.name.com/support/articles/206127137-adding-dns-records-and-templates">Name.com · Adding DNS records and templates ↗</a>
+    <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Squarespace · Connecting a Name.com domain ↗</a></div></section>
+</main>
+  <footer class="foot"><div class="shell"><span>Independent work by J</span><a href="#main">Back to top ↑</a></div></footer>
+<script src="./assets/study.js"></script>
+</body>
 </html>

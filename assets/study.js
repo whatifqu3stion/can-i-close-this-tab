@@ -1,2 +1,20 @@
-document.querySelectorAll('[data-dialog]').forEach(button=>button.addEventListener('click',()=>document.getElementById(button.dataset.dialog).showModal()));
-document.querySelectorAll('dialog').forEach(dialog=>{dialog.querySelector('.close').addEventListener('click',()=>dialog.close());dialog.addEventListener('click',event=>{if(event.target===dialog){const b=dialog.getBoundingClientRect();if(event.clientX<b.left||event.clientX>b.right||event.clientY<b.top||event.clientY>b.bottom)dialog.close()}})});
+// The story remains fully readable without JavaScript.
+const chapters = [...document.querySelectorAll('.chapter')];
+const chapterLinks = [...document.querySelectorAll('.toc a')];
+function markReadingPosition() {
+  const current = chapters.filter(section => section.getBoundingClientRect().top <= innerHeight * 0.35).pop();
+  for (const link of chapterLinks) {
+    if (current && link.hash === '#' + current.id) link.setAttribute('aria-current', 'location');
+    else link.removeAttribute('aria-current');
+  }
+}
+let queued = false;
+window.addEventListener('scroll', () => {
+  if (queued) return;
+  queued = true;
+  requestAnimationFrame(() => {
+    markReadingPosition();
+    queued = false;
+  });
+}, {passive: true});
+markReadingPosition();
