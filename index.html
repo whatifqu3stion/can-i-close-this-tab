@@ -5,23 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#153c32">
   <meta name="description" content="An independent product case study about helping first-time domain owners know when their part is done.">
-  <title>Can I close this tab? · J’s product notes</title>
+  <title>Can I close this tab? · Independent product case study</title>
   <link rel="stylesheet" href="./assets/study.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
-  <header class="shell mast">
-    <a class="identity" href="./index.html"><span class="monogram" aria-hidden="true">J</span>Product notes</a>
-    <nav aria-label="Main navigation">
-      <a href="./index.html" aria-current="page">Case study</a>
-      <a href="./guide.html">Revised guide</a>
-    </nav>
-  </header>
   <main id="main">
     <section class="shell hero">
       <div class="lead">
         <h1>Can I close<br> this tab?</h1>
-        <p class="deck">You’ve saved your domain settings in Name.com. Your site can take time to connect. What can you safely close, and where do you check back?</p>
+        <p class="deck">I rewrote a domain setup guide so a first-time owner can tell when to leave Name.com and where to check progress in Squarespace.</p>
         <div class="actions"><a class="action" href="./guide.html">Read the revised guide <svg aria-hidden="true" focusable="false"
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -53,13 +46,13 @@
   <path d="m19 12-7 7-7-7" />
 </svg>
 </a></div>
-        <p class="byline">Independent product case study by J</p>
+        <p class="byline">Independent product case study</p>
       </div>
       <figure class="handoff">
-        <figcaption>The domain handoff</figcaption>
+        <figcaption>Two milestones in domain setup</figcaption>
         <ol class="milestones">
-          <li><span class="provider">Name.com</span><strong>Saved</strong><p>Check that the six website records match. If they do, you can close Name.com.</p></li>
-          <li><span class="provider">Squarespace</span><strong>Connected</strong><p>This label confirms your domain is linked to your site.</p></li>
+          <li><span class="provider">Name.com</span><strong>Saved</strong><p>If the six saved records match Squarespace’s list, you can leave Name.com.</p></li>
+          <li><span class="provider">Squarespace</span><strong>Connected</strong><p>Squarespace has verified that the domain is linked to your site.</p></li>
         </ol>
       </figure>
     </section>
@@ -149,13 +142,13 @@
 <span>Prepare the handoff</span></a></nav></aside>
   <div class="story">
   <section class="chapter" id="task">
-    <h2>When is my part done?</h2>
-    <p>A first-time domain owner wants their new address to open their Squarespace site. They save their DNS records at Name.com, but the site can still be waiting for verification.</p>
-    <p>I focused on the moment after saving. Can the person tell whether they can close the tab, what’s still pending, and which service to check later?</p>
+    <h2>Define what “done” means</h2>
+    <p>Name.com’s template instructions end at <b>Update DNS Records</b>. Squarespace’s instructions continue: check the saved records, then return to Squarespace to see whether the domain has connected.</p>
+    <p><b>User story.</b> As a first-time domain owner, I want to know when I’ve finished my part and where to check back. Whether the existing instructions give customers that confidence is still an open question.</p>
   </section>
   <section class="chapter" id="evidence">
     <h2>One code, two interfaces</h2>
-    <p>I followed the published instructions and inspected the signed-in Name.com menus. My account had no domain, so the DNS editor evidence comes from the providers’ help-center screenshots. These images document the workflow; customer difficulty remains a hypothesis.</p>
+    <p>I could inspect the signed-in menus, but my account had no domain to configure. I used the providers’ published screenshots to trace one value across the two tabs.</p>
     <div class="pair"><figure class="evidence source">
       <div class="plate-head"><span>Squarespace</span><a href="https://support.squarespace.com/hc/article_attachments/29511641419021" aria-label="Open the full published Squarespace screenshot">Full image <svg aria-hidden="true" focusable="false"
   class="lucide lucide-arrow-up-right"
@@ -174,7 +167,7 @@
 </svg>
 </a></div>
       <div class="plate"><div class="crop"><img src="./assets/source-detail.webp" width="727" height="124" alt="Squarespace’s published DNS table. Its first row pairs a unique Host value with verify.squarespace.com."><span class="mark" aria-hidden="true"></span></div></div>
-      <figcaption><strong>Find the code</strong><p>Find the row pointing to <code>verify.squarespace.com</code>. The unique code is under <b>Host</b> in this screenshot. The written guide calls the column <b>Name</b>.</p></figcaption>
+      <figcaption><strong>Find the code</strong><p>The guide calls this column <b>Name</b>. The screenshot shows <b>Host</b>. The row pointing to <code>verify.squarespace.com</code> gives readers a landmark under either label.</p></figcaption>
     </figure><figure class="evidence field">
       <div class="plate-head"><span>Name.com</span><a href="https://support.squarespace.com/hc/article_attachments/44214864635917" aria-label="Open the full published Name.com screenshot">Full image <svg aria-hidden="true" focusable="false"
   class="lucide lucide-arrow-up-right"
@@ -193,15 +186,15 @@
 </svg>
 </a></div>
       <div class="plate"><div class="crop"><img src="./assets/field-detail.webp" width="535" height="213" alt="Name.com’s Squarespace preset with the Verification Key field outlined in blue."><span class="mark" aria-hidden="true"></span></div></div>
-      <figcaption><strong>Paste into Verification Key</strong><p>This field takes the code from the other tab. The two published screenshots use different example domains, so the codes shown here differ.</p></figcaption>
+      <figcaption><strong>Paste into Verification Key</strong><p>Name.com calls the same value <b>Verification Key</b>. The screenshots use different example domains. A customer copies the code from their own Squarespace tab.</p></figcaption>
     </figure></div>
-    <p>The template already does useful work: it prepares six website records at once. The instructions still ask the reader to identify the right value in one tab and recognize it under a different label in the next.</p>
+    <p>The template already prepares all six website records. I kept that shortcut and put the two fields together in the guide so the reader can see the relationship before switching tabs.</p>
   </section>
   <section class="chapter" id="proposal">
     <h2>Start with the help article</h2>
-    <p>An article can identify the code, explain the save preview and give the reader a clear stopping point. It uses information the providers already publish. A completion email would require a reliable signal that Squarespace had verified the domain.</p>
+    <p>A clearer article is the smallest change I can test with the published workflow. I moved the overwrite warning ahead of the save action, then gave readers a stopping rule:</p>
     <blockquote>If the six saved website records match the ones in Squarespace, you can close Name.com. Check the connection in Squarespace later.</blockquote>
-    <p><strong>User story.</strong> As a first-time owner, I want to know whether I’ve finished my part and where to check next, so I can leave setup with confidence.</p>
+    <p>I also considered a “your site is connected” email. Sending it after a successful save could reassure someone too early. I’d ask Engineering whether Name.com can detect final verification before offering that notification.</p>
     <a class="action" href="./guide.html">Read the revised guide <svg aria-hidden="true" focusable="false"
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -221,26 +214,26 @@
   </section>
   <section class="chapter" id="research">
     <h2>Test what people think happened</h2>
-    <p>I’d give a first-time owner the existing instructions and a fictional setup, observe which value they submit, and ask: “If you closed the laptop now, what would you expect to happen?”</p>
+    <p>I’d start with the existing instructions and a fictional setup. Two people could enter the same code and click Save, yet only one might know that verification is still pending. After they finish, I’d ask, “If you closed the laptop now, what would you expect to happen? Where would you check?”</p>
     <dl class="decision-list">
-      <dt>Wrong value entered</dt><dd>Compare the existing instructions with a paired-field example. Test whether people can find the code without coaching.</dd>
-      <dt>Correct save, wrong expectation</dt><dd>Revise the post-save explanation and ask where they would check the final status.</dd>
+      <dt>Wrong value entered</dt><dd>Try a still showing the two fields together. Give the next participant a fresh code and see whether they can identify it unaided.</dd>
+      <dt>Correct save, wrong expectation</dt><dd>Focus the next revision on the confirmation message. Another illustration of the code would teach a step they already understand.</dd>
       <dt>Both steps understood</dt><dd>Keep the current guidance and investigate another step.</dd>
     </dl>
-    <p><strong>Proposed PostHog measure:</strong> the share of first submissions containing the correct code. Report starts with no submission separately. To assess understanding, use the participant’s explanation of what happens next.</p>
+    <p>In a PostHog experiment, I’d compare the share of first submissions that contain the correct code and count started tasks with no submission separately. The participant’s answer tells me whether the guide also explained when they could leave.</p>
   </section>
   <section class="chapter" id="handoff">
-    <h2>What the team needs to ship</h2>
-    <p>The acceptance criteria cover three outcomes. A save error asks the reader to check what was retained before retrying. A matching record list means they can leave Name.com. Only Squarespace’s verified status establishes that the domain is connected.</p>
-    <p><strong>For Engineering:</strong> which events confirm a successful save and a verified connection? <strong>For Support:</strong> what do customers actually ask after saving?</p>
-    <p>Before release, I’d check recovery, keyboard access, text-only completion and current field labels. The study includes a proposed research plan; customer outcomes have yet to be measured.</p>
+    <h2>What the team needs before release</h2>
+    <p><b>Acceptance criteria.</b> After a failed save, the guide tells the reader how to check what was retained. After a successful save, it identifies which records to compare. It reserves “Connected” for the state Squarespace verifies.</p>
+    <p>I’d ask Support for examples of questions that came in after a successful save. If customers can copy the key but still contact Support to ask whether they’re done, I’d test guidance on the confirmation screen itself.</p>
+    <p>Before release I’d check that the instructions work with a keyboard and with images off, and that the field names still match both services. The proposed tests haven’t been run.</p>
   </section>
   </div></div></div>
     <section class="shell sources" id="sources"><h2>Provider sources</h2><div>
     <a href="https://www.name.com/support/articles/206127137-adding-dns-records-and-templates">Name.com · Adding DNS records and templates ↗</a>
     <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Squarespace · Connecting a Name.com domain ↗</a></div></section>
 </main>
-  <footer class="foot"><div class="shell"><span>Independent work by J</span><a href="#main">Back to top ↑</a></div></footer>
+  <footer class="foot"><div class="shell"><span>Case study by J</span><a href="#main">Back to top ↑</a></div></footer>
 <script src="./assets/study.js"></script>
 </body>
 </html>
