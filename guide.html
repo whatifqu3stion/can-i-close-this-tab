@@ -12,8 +12,16 @@
   <a class="skip" href="#main">Skip to content</a>
   <main id="main">
     <div class="shell guide-layout">
-      <aside><nav aria-label="Guide contents"><span>On this page</span>
-        <a href="#before">Before you start</a><a href="#start">Get the records</a><a href="#key">Copy the key and save</a><a href="#check">Can I close the tab?</a><a href="#connection">Confirm the connection</a></nav></aside>
+      <aside class="guide-rail"><div class="rail-content"><nav aria-label="Guide contents"><span>On this page</span>
+        <a href="#before">Before you start</a><a href="#start">Get the records</a><a href="#key">Copy the key and save</a><a href="#check">Can I close the tab?</a><a href="#connection">Confirm the connection</a></nav>
+        <section class="guide-changes" aria-labelledby="changes-title">
+          <h2 id="changes-title">Change log</h2>
+          <time datetime="2026-11-08">8 November 2026</time>
+          <ul>
+            <li>Added the <a href="#start">Squarespace record list</a> and a wider view of the <a href="#key">Name.com template</a>.</li>
+            <li>Added checks for the verification key and <a href="#check">when to close Name.com</a>.</li>
+          </ul>
+        </section></div></aside>
       <article class="article lesson">
         <a class="backlink" href="./index.html">← Case study</a>
         <h1>Connect your Name.com domain to Squarespace</h1>
@@ -26,6 +34,12 @@
         <section class="lesson-step" id="start">
           <h2>1. Get the records from Squarespace</h2>
           <p>In your site’s <b>Domains</b> panel, select <b>Use a domain I own</b> and enter your full domain. Select <b>Connect domain</b>, choose <b>Name.com</b>, and continue until the record list appears. Keep this tab open.</p>
+          <figure class="guide-shot evidence host-overview">
+            <a class="plate" href="https://support.squarespace.com/hc/article_attachments/29511641419021" aria-label="Open the full published Squarespace DNS settings screenshot">
+              <span class="crop"><img src="./assets/squarespace-dns-overview.webp" width="1213" height="622" alt="Squarespace DNS Settings lists two CNAME and four A records, with expected values and current status shown separately."></span>
+            </a>
+            <figcaption>Keep this list as your reference. Compare against your site’s <b>Required Data</b> values. <b>Current Data</b> shows what Squarespace detects. <a href="https://support.squarespace.com/hc/article_attachments/29511641419021">Full Squarespace screenshot ↗</a></figcaption>
+          </figure>
         </section>
         <section class="lesson-step" id="key">
           <h2>2. Copy the key and save the records</h2>
@@ -41,9 +55,9 @@
           <p>In a second tab, open <b>My Domains</b> and choose your domain. Select <b>Manage DNS Records</b>, then <b>Show DNS Templates</b>. Choose <b>Squarespace.com</b> and paste the code into <b>Verification Key</b>.</p>
           <figure class="guide-shot evidence field">
             <a class="plate" href="https://support.squarespace.com/hc/article_attachments/44214864635917" aria-label="Open the full published Name.com screenshot: Name.com’s Squarespace template with the Verification Key field outlined.">
-              <span class="crop"><img src="./assets/field-detail.webp" width="535" height="213" alt="Name.com’s Squarespace template with the Verification Key field outlined."><span class="mark" aria-hidden="true"></span></span>
+              <span class="crop"><img src="./assets/namecom-template-key.webp" width="521" height="335" alt="Name.com Manage DNS screen showing Show DNS Templates, the Squarespace.com preset and the outlined Verification Key field."><span class="mark" aria-hidden="true"></span></span>
             </a>
-            <figcaption>Paste the code from your own site. The screenshots use different example domains. <a href="https://support.squarespace.com/hc/article_attachments/44214864635917">Full Name.com screenshot ↗</a></figcaption>
+            <figcaption>The selected preset is <b>Squarespace.com</b>. Paste your own code in the outlined field. The providers’ screenshots use different example domains. <a href="https://support.squarespace.com/hc/article_attachments/44214864635917">Full Name.com screenshot ↗</a></figcaption>
           </figure>
           <div class="self-check"><h3>Quick check: which value did you paste?</h3>
             <p>It should match the unique code in your Squarespace tab. If you pasted <code>verify.squarespace.com</code>, copy the code from the same row and replace it.</p>
