@@ -15,22 +15,7 @@
       <div class="lead">
         <h1>Can I close<br> this tab?</h1>
         <p class="deck">I rewrote a domain setup guide so a first-time owner can tell when to leave Name.com and where to check progress in Squarespace.</p>
-        <div class="actions"><a class="action" href="./guide.html">Read the revised guide <svg aria-hidden="true" focusable="false"
-  class="lucide lucide-arrow-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M5 12h14" />
-  <path d="m12 5 7 7-7 7" />
-</svg>
-</a><a class="quiet" href="#study">Follow the process <svg aria-hidden="true" focusable="false"
+        <div class="actions"><a class="action" href="#task">Follow the process <svg aria-hidden="true" focusable="false"
   class="lucide lucide-arrow-down"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -54,13 +39,20 @@
             <circle cx="24" cy="15" r="8"/>
             <path d="M7 41c0-10 7.2-16 17-16s17 6 17 16z"/>
           </svg>
-          <span><b>First-time domain owner</b><span>Wants to leave setup and know when the site is connected.</span></span>
+          <span><b>First-time domain owner</b><span>Connecting a domain to a Squarespace site</span></span>
         </figcaption>
-        <ol class="milestones">
-          <li><span class="provider">Name.com</span><strong>Saved</strong><p>If the six saved records match Squarespace’s list, you can leave Name.com.</p></li>
-          <li><span class="provider">Squarespace</span><strong>Connected</strong><p>Squarespace has verified that the domain is linked to your site.</p></li>
-        </ol>
-        <a class="journey-next" href="#email">See the proposed confirmation email <span aria-hidden="true">↓</span></a>
+        <div class="transfer" aria-label="Example verification key copied from Squarespace to Name.com">
+          <div class="transfer-row">
+            <img class="brand squarespace" src="./assets/squarespace-logo.svg" alt="Squarespace">
+            <div class="example-field"><span>Name / Host</span><code class="transfer-code origin">7k2v8p6x</code></div>
+          </div>
+          <div class="transfer-route" aria-hidden="true"><span>↓</span></div>
+          <div class="transfer-row">
+            <img class="brand namecom" src="./assets/namecom-logo.svg" alt="Name.com">
+            <div class="example-field"><span>Verification Key</span><code class="transfer-code destination">7k2v8p6x</code></div>
+          </div>
+        </div>
+        <p class="transfer-legend">Same example key, two tabs. The owner copies it from Squarespace and pastes it into Name.com.</p>
       </figure>
     </section>
     <div class="study" id="study"><div class="shell narrative">
@@ -167,6 +159,11 @@
   <section class="chapter" id="task">
     <h2>Define what “done” means</h2>
     <p>Name.com’s template instructions end at <b>Update DNS Records</b>. Squarespace’s instructions continue: check the saved records, then return to Squarespace to see whether the domain has connected.</p>
+    <figure class="author-note">
+      <span class="quote-mark" aria-hidden="true">“</span>
+      <blockquote>They should have a feeling of being done and know what else they have to do, if anything.</blockquote>
+      <figcaption>J · Design rationale</figcaption>
+    </figure>
     <p><b>User story.</b> As a first-time domain owner, I want to know when I’ve finished my part and where to check back. Whether the existing instructions give customers that confidence is still an open question.</p>
   </section>
   <section class="chapter" id="evidence">
@@ -216,7 +213,7 @@
   <section class="chapter" id="proposal">
     <h2>Start with the help article</h2>
     <p>A clearer article is the smallest change I can test with the published workflow. I moved the overwrite warning ahead of the save action, then gave readers a stopping rule:</p>
-    <blockquote>If the six saved website records match the ones in Squarespace, you can close Name.com. Check the connection in Squarespace later.</blockquote>
+    <p class="guide-excerpt"><b>Proposed guide copy</b>If the six saved website records match the ones in Squarespace, you can close Name.com. Check the connection in Squarespace later.</p>
     <a class="action" href="./guide.html">Read the revised guide <svg aria-hidden="true" focusable="false"
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -271,7 +268,20 @@
       <dt>Correct save, wrong expectation</dt><dd>Focus the next revision on the confirmation message. Another illustration of the code would teach a step they already understand.</dd>
       <dt>Both steps understood</dt><dd>Keep the current guidance and investigate another step.</dd>
     </dl>
-    <p>In a PostHog experiment, I’d compare the share of first submissions that contain the correct code and count started tasks with no submission separately. The participant’s answer tells me whether the guide also explained when they could leave.</p>
+    <div class="experiment" id="experiment" aria-labelledby="experiment-title">
+      <div class="experiment-head"><h3 id="experiment-title">PostHog experiment plan</h3><span>Proposed · Never run</span></div>
+      <p>Does the revised guide help first-time owners recognize when they can leave Name.com and where to check the connection?</p>
+      <dl class="settings">
+        <dt>Feature flag</dt><dd><code>domain-handoff-guide</code></dd>
+        <dt>Audience &amp; exposure</dt><dd>First-time owners in a simulated setup. Assign each person once when their guide opens. Both groups get the same fictional task and follow-up question.</dd>
+        <dt>Variants</dt><dd><b>50% control</b> · Published instructions<br><b>50% test</b> · Revised guide with annotated screenshots and self-checks</dd>
+        <dt>Primary metric</dt><dd>Share of exposed participants whose first answer identifies <em>both</em> outcomes: they can leave after the records match, and Squarespace confirms the connection. Within 30 minutes of exposure, count each participant once. Missing answers stay in the denominator.</dd>
+        <dt>Proposed event</dt><dd><code>handoff_answered</code> with <code>attempt = 1</code> and <code>correct = true</code>, scored against the two outcomes above.</dd>
+        <dt>Secondary checks</dt><dd>Track first-attempt key accuracy and how many people leave without answering. Keep practice values out of event data.</dd>
+      </dl>
+      <p class="test-decision"><b>Decision.</b> I’d favor the revision if more people understand the handoff without making more key-entry errors. If the sample is too small to distinguish the variants, I’d use the screen-share observations to plan another test.</p>
+      <a class="textlink" href="https://posthog.com/docs/experiments/creating-an-experiment">PostHog setup reference ↗</a>
+    </div>
   </section>
   <section class="chapter" id="handoff">
     <h2>What the team needs before release</h2>
@@ -284,7 +294,7 @@
     <a href="https://www.name.com/support/articles/206127137-adding-dns-records-and-templates">Name.com · Adding DNS records and templates ↗</a>
     <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Squarespace · Connecting a Name.com domain ↗</a></div></section>
 </main>
-  <footer class="foot"><div class="shell"><span>Case study by J</span><a href="#main">Back to top ↑</a></div></footer>
+  <footer class="foot"><div class="shell"><span>Independent work by J · <a href="https://github.com/whatifqu3stion/can-i-close-this-tab">Source on GitHub ↗</a></span><a href="#main">Back to top ↑</a></div></footer>
 <script src="./assets/study.js"></script>
 </body>
 </html>

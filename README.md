@@ -13,3 +13,5 @@ Adapted from the supplied landing-page framework: understated navigation, a ques
 ## Visual sources
 
 Interface details come from publicly available Squarespace help articles and each links to its original screenshot. Navigation icons come from Lucide; the license is in assets/lucide-LICENSE.txt.
+
+The copy diagram uses [Squarespace’s published logo](https://www.squarespace.com/logo-guidelines) and [Name.com’s own wordmark](https://www.name.com/_nuxt/name_logo-white.ByRWZfzV.svg) as provider identifiers. It shows a fictional key being copied manually. The proposed PostHog settings and email are independent examples.

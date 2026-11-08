@@ -13,87 +13,76 @@
   <main id="main">
     <div class="shell guide-layout">
       <aside><nav aria-label="Guide contents"><span>On this page</span>
-        <a href="#before">Before you start</a><a href="#start">Start in Squarespace</a><a href="#key">Copy the verification key</a><a href="#check">Check the save</a><a href="#connection">Confirm the connection</a></nav></aside>
-      <article class="article"><a class="backlink" href="./index.html">← Case study</a><h1>Connect your Name.com domain to Squarespace</h1><p>Keep two tabs open: Squarespace provides the DNS records for your site, and Name.com is where you save them.</p><p><a href="#check">Already saved? Check whether you can close Name.com ↓</a></p><h2 id="before">Before you start</h2><p>Use this guide if Name.com manages your DNS. If your domain uses another provider’s nameservers, add the Squarespace records with that provider. <a href="https://cs.name.com/hc/en-us/articles/205934547-Changing-nameservers-for-DNS-management">Check who manages your DNS</a>.</p><h2 id="start">1. Start in Squarespace</h2><p>Open your site’s <strong>Domains</strong> panel and choose <strong>Use a domain I own</strong>. Enter your domain, choose <strong>Connect domain</strong>, and select <strong>Name.com</strong> as your provider. Continue until Squarespace shows the DNS records for your domain. Leave that tab open.</p><h2 id="key">2. Copy the verification key into Name.com</h2><p>Open Name.com in a second tab. From <strong>My Domains</strong>, choose the domain you entered in Squarespace. Open <strong>Manage DNS Records</strong>, select <strong>Show DNS Templates</strong>, and choose <strong>Squarespace.com</strong>.</p><p>In Squarespace, find the row pointing to <code>verify.squarespace.com</code>. Copy the letters and numbers under <strong>Name</strong> (labeled <strong>Host</strong> in the example). Paste them into Name.com’s <strong>Verification Key</strong> field.</p><div class="guide-pair"><figure class="evidence source">
-      <div class="plate-head"><span>Squarespace</span><a href="https://support.squarespace.com/hc/article_attachments/29511641419021" aria-label="Open the full published Squarespace screenshot">Full image <svg aria-hidden="true" focusable="false"
-  class="lucide lucide-arrow-up-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M7 7h10v10" />
-  <path d="M7 17 17 7" />
-</svg>
-</a></div>
-      <div class="plate"><div class="crop"><img src="./assets/source-detail.webp" width="727" height="124" alt="Squarespace’s published DNS table. Its first row pairs a unique Host value with verify.squarespace.com."><span class="mark" aria-hidden="true"></span></div></div>
-      <figcaption><strong>Find the code</strong><p>The outlined cell holds the code. The destination address identifies the row.</p></figcaption>
-    </figure><figure class="evidence field">
-      <div class="plate-head"><span>Name.com</span><a href="https://support.squarespace.com/hc/article_attachments/44214864635917" aria-label="Open the full published Name.com screenshot">Full image <svg aria-hidden="true" focusable="false"
-  class="lucide lucide-arrow-up-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M7 7h10v10" />
-  <path d="M7 17 17 7" />
-</svg>
-</a></div>
-      <div class="plate"><div class="crop"><img src="./assets/field-detail.webp" width="535" height="213" alt="Name.com’s Squarespace preset with the Verification Key field outlined in blue."><span class="mark" aria-hidden="true"></span></div></div>
-      <figcaption><strong>Paste into Verification Key</strong><p>Use the code for your own domain. These published screenshots show different examples.</p></figcaption>
-    </figure></div><p class="review"><strong>Before saving, check the preview.</strong> Applying the template can replace existing records. If you don’t recognize a record, check what it does first. Keep any records your email service uses.</p><figure class="evidence save">
-      <div class="plate-head"><span>Name.com</span><a href="https://support.squarespace.com/hc/article_attachments/44214864635917" aria-label="Open the full published Name.com screenshot">Full image <svg aria-hidden="true" focusable="false"
-  class="lucide lucide-arrow-up-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M7 7h10v10" />
-  <path d="M7 17 17 7" />
-</svg>
-</a></div>
-      <div class="plate"><div class="crop"><img src="./assets/save-detail.webp" width="736" height="109" alt="The Name.com preview includes an overwrite warning immediately above Update DNS Records."><span class="mark" aria-hidden="true"></span></div></div>
-      <figcaption><strong>Review before saving</strong><p>When the proposed changes look right, select <b>Update DNS Records</b>.</p></figcaption>
-    </figure><h2 id="check">3. Check the saved records before you close the tab</h2><p>Compare the six website records saved in Name.com with the six shown in your Squarespace tab. Other records, such as those for email, can stay in place.</p><p class="stop"><strong>Do the website records match?</strong> You’ve finished the Name.com step. You can close that tab while Squarespace checks the connection.</p><p><strong>Saw a save error?</strong> Check the saved record list before retrying. If the change is missing, follow the error message and try again. If the records already match, continue to Squarespace.</p><p><strong>Something doesn’t match?</strong> Compare that entry with the value shown for your own site in Squarespace. The <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">record-by-record guide</a> explains how to handle a conflict.</p><h2 id="connection">4. Check the connection in Squarespace</h2><p>Squarespace says the connection can take <strong>24–48 hours</strong>. When you want an update, return to your domain’s DNS settings in Squarespace and select <strong>Refresh records</strong>.</p><ul><li><strong>Connected</strong> in the Domains panel means Squarespace has verified the connection. You’re done with this setup.</li><li><strong>Still pending after 48 hours?</strong> Use Squarespace’s DNS checker to identify which record needs attention. <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Troubleshoot the connection</a>.</li></ul><figure class="evidence refresh">
-      <div class="plate-head"><span>Squarespace</span><a href="https://support.squarespace.com/hc/article_attachments/29511641419021" aria-label="Open the full published Squarespace screenshot">Full image <svg aria-hidden="true" focusable="false"
-  class="lucide lucide-arrow-up-right"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M7 7h10v10" />
-  <path d="M7 17 17 7" />
-</svg>
-</a></div>
-      <div class="plate"><div class="crop"><img src="./assets/refresh-detail.webp" width="385" height="92" alt="Refresh Records button in Squarespace’s DNS settings."><span class="mark" aria-hidden="true"></span></div></div>
-      <figcaption><strong>Return to check</strong><p>Refresh Records checks for changes. Look in the Domains panel for the final status.</p></figcaption>
-    </figure><h2 id="references">Provider guides</h2><p><a href="https://www.name.com/support/articles/206127137-adding-dns-records-and-templates">Name.com · Adding DNS records and templates</a> · <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Squarespace · Connecting a Name.com domain</a></p>
-      <a class="textlink" href="./index.html#study">Return to the case study →</a></article>
+        <a href="#before">Before you start</a><a href="#start">Get the records</a><a href="#key">Copy the key and save</a><a href="#check">Can I close the tab?</a><a href="#connection">Confirm the connection</a></nav></aside>
+      <article class="article lesson">
+        <a class="backlink" href="./index.html">← Case study</a>
+        <h1>Connect your Name.com domain to Squarespace</h1>
+        <p class="lesson-intro">You’ll copy a verification key between two tabs, save the records, and check when you can close Name.com. Squarespace confirms the connection separately.</p>
+        <p><a href="#check">Already saved? Check whether you can close Name.com ↓</a></p>
+        <section class="prereq" id="before">
+          <h2>Before you start</h2>
+          <p>Use this guide if Name.com manages your DNS. If another provider manages it, enter Squarespace’s records there. <a href="https://cs.name.com/hc/en-us/articles/205934547-Changing-nameservers-for-DNS-management">Check who manages your DNS</a>.</p>
+        </section>
+        <section class="lesson-step" id="start">
+          <h2>1. Get the records from Squarespace</h2>
+          <p>In your site’s <b>Domains</b> panel, select <b>Use a domain I own</b> and enter your full domain. Select <b>Connect domain</b>, choose <b>Name.com</b>, and continue until the record list appears. Keep this tab open.</p>
+        </section>
+        <section class="lesson-step" id="key">
+          <h2>2. Copy the key and save the records</h2>
+          <h3>Copy from Squarespace</h3>
+          <p>Find the row pointing to <code>verify.squarespace.com</code>. Copy the letters and numbers in the <b>Name</b> column, labeled <b>Host</b> in the example below.</p>
+          <figure class="guide-shot evidence source">
+            <a class="plate" href="https://support.squarespace.com/hc/article_attachments/29511641419021" aria-label="Open the full published Squarespace screenshot: Squarespace DNS settings. The verification row contains a unique code under Host and points to verify.squarespace.com.">
+              <span class="crop"><img src="./assets/source-detail.webp" width="727" height="124" alt="Squarespace DNS settings. The verification row contains a unique code under Host and points to verify.squarespace.com."><span class="mark" aria-hidden="true"></span></span>
+            </a>
+            <figcaption>The outlined cell contains the verification key. <a href="https://support.squarespace.com/hc/article_attachments/29511641419021">Full Squarespace screenshot ↗</a></figcaption>
+          </figure>
+          <h3>Paste into Name.com</h3>
+          <p>In a second tab, open <b>My Domains</b> and choose your domain. Select <b>Manage DNS Records</b>, then <b>Show DNS Templates</b>. Choose <b>Squarespace.com</b> and paste the code into <b>Verification Key</b>.</p>
+          <figure class="guide-shot evidence field">
+            <a class="plate" href="https://support.squarespace.com/hc/article_attachments/44214864635917" aria-label="Open the full published Name.com screenshot: Name.com’s Squarespace template with the Verification Key field outlined.">
+              <span class="crop"><img src="./assets/field-detail.webp" width="535" height="213" alt="Name.com’s Squarespace template with the Verification Key field outlined."><span class="mark" aria-hidden="true"></span></span>
+            </a>
+            <figcaption>Paste the code from your own site. The screenshots use different example domains. <a href="https://support.squarespace.com/hc/article_attachments/44214864635917">Full Name.com screenshot ↗</a></figcaption>
+          </figure>
+          <div class="self-check"><h3>Quick check: which value did you paste?</h3>
+            <p>It should match the unique code in your Squarespace tab. If you pasted <code>verify.squarespace.com</code>, copy the code from the same row and replace it.</p>
+          </div>
+          <h3>Review, then save</h3>
+          <p>The template can replace existing records. Keep records used for email. If a proposed change conflicts with a record you don’t recognize, check its purpose first. When the preview looks right, select <b>Update DNS Records</b>.</p>
+          <figure class="guide-shot evidence save">
+            <a class="plate" href="https://support.squarespace.com/hc/article_attachments/44214864635917" aria-label="Open the full published Name.com screenshot: Name.com preview showing the overwrite notice above the Update DNS Records button.">
+              <span class="crop"><img src="./assets/save-detail.webp" width="736" height="109" alt="Name.com preview showing the overwrite notice above the Update DNS Records button."><span class="mark" aria-hidden="true"></span></span>
+            </a>
+            <figcaption>The preview shows what will change when you save. <a href="https://support.squarespace.com/hc/article_attachments/44214864635917">Full Name.com screenshot ↗</a></figcaption>
+          </figure>
+        </section>
+        <section class="lesson-step" id="check">
+          <h2>3. Decide whether you can close Name.com</h2>
+          <p>Compare the two CNAME records and four A records with the values in your Squarespace tab. Your domain can also have records for other services.</p>
+          <div class="self-check"><h3>Do all six saved website records match Squarespace’s list?</h3>
+            <p><b>Yes.</b> You’ve finished your part in Name.com. You can close that tab and check progress in Squarespace later.</p>
+            <p><b>No.</b> Keep both tabs open. Compare the missing or different entry with your own Squarespace list. <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">See the record-by-record guide</a>.</p>
+          </div>
+          <p><b>Saw a save error?</b> Check what was saved before retrying. If a change is missing, follow the error message and retry that change.</p>
+        </section>
+        <section class="lesson-step" id="connection">
+          <h2>4. Confirm the connection in Squarespace</h2>
+          <p>Connection can take <b>24–48 hours</b>. To check progress, open your domain’s DNS settings in Squarespace and select <b>Refresh records</b>.</p>
+          <figure class="guide-shot evidence refresh">
+            <a class="plate" href="https://support.squarespace.com/hc/article_attachments/29511641419021" aria-label="Open the full published Squarespace screenshot: Squarespace DNS settings with Refresh Records highlighted.">
+              <span class="crop"><img src="./assets/refresh-detail.webp" width="385" height="92" alt="Squarespace DNS settings with Refresh Records highlighted."><span class="mark" aria-hidden="true"></span></span>
+            </a>
+            <figcaption>Refresh Records checks the current DNS values. <a href="https://support.squarespace.com/hc/article_attachments/29511641419021">Full Squarespace screenshot ↗</a></figcaption>
+          </figure>
+          <p><b>Connected</b> in the Domains panel means Squarespace has verified the connection. You’re done.</p>
+          <p><b>Still pending after 48 hours?</b> Use <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Squarespace’s DNS checker</a> to identify the record that needs attention.</p>
+        </section>
+        <section class="guide-sources" id="references"><h2>Provider guides</h2><p><a href="https://www.name.com/support/articles/206127137-adding-dns-records-and-templates">Name.com DNS templates</a> · <a href="https://support.squarespace.com/hc/en-us/articles/205812418-Connecting-a-Name-com-domain-to-your-Squarespace-site">Squarespace connection guide</a></p></section>
+        <a class="textlink" href="./index.html#study">Return to the case study →</a>
+      </article>
     </div>
 </main>
-  <footer class="foot"><div class="shell"><span>Independent guide · Case study by J</span><a href="#main">Back to top ↑</a></div></footer>
+  <footer class="foot"><div class="shell"><span>Independent work by J · <a href="https://github.com/whatifqu3stion/can-i-close-this-tab">Source on GitHub ↗</a></span><a href="#main">Back to top ↑</a></div></footer>
 </body>
 </html>
