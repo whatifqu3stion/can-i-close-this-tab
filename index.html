@@ -31,7 +31,7 @@
   <path d="m19 12-7 7-7-7" />
 </svg>
 </a></div>
-        <p class="byline">Independent product case study</p>
+        <p class="byline">Independent product case study by J</p>
       </div>
       <figure class="handoff">
         <figcaption class="journey-person">
@@ -106,23 +106,7 @@
   <path d="M12 5v16" />
   <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" />
 </svg>
-<span>Choose the change</span></a><a href="#email"><svg aria-hidden="true" focusable="false"
-  class="lucide lucide-mail-check"
-  xmlns="http://www.w3.org/2000/svg"
-  width="24"
-  height="24"
-  viewBox="0 0 24 24"
-  fill="none"
-  stroke="currentColor"
-  stroke-width="2"
-  stroke-linecap="round"
-  stroke-linejoin="round"
->
-  <path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" />
-  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-  <path d="m16 19 2 2 4-4" />
-</svg>
-<span>Confirm by email</span></a><a href="#research"><svg aria-hidden="true" focusable="false"
+<span>Choose the change</span></a><a href="#research"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-flask-conical"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -138,7 +122,23 @@
   <path d="M6.453 15h11.094" />
   <path d="M8.5 2h7" />
 </svg>
-<span>Plan the test</span></a><a href="#handoff"><svg aria-hidden="true" focusable="false"
+<span>Plan the test</span></a><a href="#email"><svg aria-hidden="true" focusable="false"
+  class="lucide lucide-mail-check"
+  xmlns="http://www.w3.org/2000/svg"
+  width="24"
+  height="24"
+  viewBox="0 0 24 24"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="2"
+  stroke-linecap="round"
+  stroke-linejoin="round"
+>
+  <path d="M22 13V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v12c0 1.1.9 2 2 2h8" />
+  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+  <path d="m16 19 2 2 4-4" />
+</svg>
+<span>Consider an email</span></a><a href="#handoff"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-clipboard-check"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -164,7 +164,8 @@
       <blockquote>I wanted someone to be able to close the tab with confidence. That meant answering three questions: What just happened? Do I need to do anything else? How will I know it worked?</blockquote>
       <figcaption>J · Design rationale</figcaption>
     </figure>
-    <p><b>User story.</b> As a first-time domain owner, I want to know when I’ve finished my part and where to check back. Whether the existing instructions give customers that confidence is still an open question.</p>
+    <p><b>User story.</b> As a first-time domain owner, I want to know when I’ve finished my part and where to check back.</p>
+    <p>The instructions show where the handoff happens. How often it causes confusion is still open. Before prioritizing a rewrite, I’d ask Support how often first-time owners get in touch after saving and what they’re trying to confirm. I’d also check how they found the instructions. If owners miss the guide when they need it, I’d test a link from the save screen.</p>
   </section>
   <section class="chapter" id="evidence">
     <h2>One code, two interfaces</h2>
@@ -208,12 +209,15 @@
       <div class="plate"><div class="crop"><img src="./assets/field-detail.webp" width="535" height="213" alt="Name.com’s Squarespace preset with the Verification Key field outlined in blue."><span class="mark" aria-hidden="true"></span></div></div>
       <figcaption><strong>Paste into Verification Key</strong><p>Name.com calls the same value <b>Verification Key</b>. The screenshots use different example domains. A customer copies the code from their own Squarespace tab.</p></figcaption>
     </figure></div>
-    <p>The template already prepares all six website records. I kept that shortcut and put the two fields together in the guide so the reader can see the relationship before switching tabs.</p>
+    <p>I used AI to compare the providers’ instructions, then checked the field labels against their published screenshots. That’s why the guide points to the row for <code>verify.squarespace.com</code> as well as naming the column. I kept the template shortcut that prepares all six website records.</p>
   </section>
   <section class="chapter" id="proposal">
     <h2>Start with the help article</h2>
-    <p>A clearer article is the smallest change I can test with the published workflow. I moved the overwrite warning ahead of the save action, then gave readers a stopping rule:</p>
-    <p class="guide-excerpt"><b>Proposed guide copy</b>If the six saved website records match the ones in Squarespace, you can close Name.com. Check the connection in Squarespace later.</p>
+    <p>The guide is the smallest change I can put in someone’s hands. I kept the existing save action, moved the overwrite warning ahead of it, and added the decision the owner faces next.</p>
+    <dl class="guide-comparison">
+      <div><dt>Where the template instructions end</dt><dd><strong>Update DNS Records</strong> is the last action in <a href="https://www.name.com/support/articles/206127137-adding-dns-records-and-templates">Name.com’s template instructions</a>.</dd></div>
+      <div><dt>What the revised guide adds</dt><dd>Compare the six saved website records with your Squarespace list. If they match, you can close Name.com. Later, look for <strong>Connected</strong> in Squarespace.</dd></div>
+    </dl>
     <a class="action" href="./guide.html">Read the revised guide <svg aria-hidden="true" focusable="false"
   class="lucide lucide-arrow-right"
   xmlns="http://www.w3.org/2000/svg"
@@ -231,9 +235,32 @@
 </svg>
 </a>
   </section>
+  <section class="chapter" id="research">
+    <h2>Test what people think happened</h2>
+    <p>I’d start with the existing instructions and a fictional setup. Two people could enter the same code and click Save, yet only one might know that verification is still pending. After they finish, I’d ask, “If you closed the laptop now, what would you expect to happen? Where would you check?”</p>
+    <dl class="decision-list">
+      <dt>Wrong value entered</dt><dd>Try a still showing the two fields together. Give the next participant a fresh code and see whether they can identify it unaided.</dd>
+      <dt>Correct save, wrong expectation</dt><dd>Test the guide’s new ending. If people understand it but miss it while setting up their domain, try the same guidance on the save screen.</dd>
+      <dt>Both steps understood</dt><dd>Keep the current guidance and investigate another step.</dd>
+    </dl>
+    <div class="experiment" id="experiment" aria-labelledby="experiment-title">
+      <div class="experiment-head"><h3 id="experiment-title">PostHog experiment plan</h3><span>Proposed · Never run</span></div>
+      <p>Does the revised guide help first-time owners recognize when they can leave Name.com and where to check the connection?</p>
+      <dl class="settings">
+        <dt>Feature flag</dt><dd><code>domain-handoff-guide</code></dd>
+        <dt>Audience &amp; exposure</dt><dd>First-time owners in a simulated setup. Assign each person once when their guide opens. Both groups get the same fictional task and follow-up question.</dd>
+        <dt>Variants</dt><dd><b>50% control</b> · Current Name.com template and Squarespace connection instructions<br><b>50% test</b> · Revised guide with annotated screenshots and self-checks</dd>
+        <dt>Primary metric</dt><dd>Share of exposed participants whose first answer identifies <em>both</em> outcomes: they can leave after the records match, and Squarespace confirms the connection. Within 30 minutes of exposure, count each participant once. Missing answers stay in the denominator.</dd>
+        <dt>Proposed event</dt><dd><code>handoff_answered</code> with <code>attempt = 1</code> and <code>correct = true</code>, recorded after a reviewer scores the answer against the same two criteria, without seeing the assigned variant.</dd>
+        <dt>Secondary checks</dt><dd>Track first-attempt key accuracy and how many people leave without answering. Keep practice values out of event data.</dd>
+      </dl>
+      <p class="test-decision"><b>Decision.</b> I’d run the A/B test only with enough participants to compare the guides. I’d favor the revision if it improves comprehension without increasing key-entry errors. This measures understanding in a simulated task. A live rollout would need its own follow-up.</p>
+      <a class="textlink" href="https://posthog.com/docs/experiments/creating-an-experiment">PostHog setup reference ↗</a>
+    </div>
+  </section>
   <section class="chapter" id="email">
-    <h2>Let the owner leave the tab</h2>
-    <p>After saving, an owner could choose “Email me when it’s connected” and close the tab. I’d send this message once Squarespace confirms the connection.</p>
+    <h2>When would an email help?</h2>
+    <p>If owners understand they can leave but still find themselves checking back, I’d ask whether they’d want a one-time email. Here’s what an owner who opted in could receive after Squarespace verifies the connection.</p>
     <figure class="email-sample">
       <figcaption><svg aria-hidden="true" focusable="false"
   class="lucide lucide-mail-check"
@@ -268,36 +295,13 @@
         </div>
       </div>
     </figure>
-    <p><strong>Send condition.</strong> I’d ask Engineering whether Name.com can detect Squarespace’s verified status. If it can, send one confirmation per connection to an owner who opted in. A timer alone could support a reminder to check.</p>
-  </section>
-  <section class="chapter" id="research">
-    <h2>Test what people think happened</h2>
-    <p>I’d start with the existing instructions and a fictional setup. Two people could enter the same code and click Save, yet only one might know that verification is still pending. After they finish, I’d ask, “If you closed the laptop now, what would you expect to happen? Where would you check?”</p>
-    <dl class="decision-list">
-      <dt>Wrong value entered</dt><dd>Try a still showing the two fields together. Give the next participant a fresh code and see whether they can identify it unaided.</dd>
-      <dt>Correct save, wrong expectation</dt><dd>Focus the next revision on the confirmation message. Another illustration of the code would teach a step they already understand.</dd>
-      <dt>Both steps understood</dt><dd>Keep the current guidance and investigate another step.</dd>
-    </dl>
-    <div class="experiment" id="experiment" aria-labelledby="experiment-title">
-      <div class="experiment-head"><h3 id="experiment-title">PostHog experiment plan</h3><span>Proposed · Never run</span></div>
-      <p>Does the revised guide help first-time owners recognize when they can leave Name.com and where to check the connection?</p>
-      <dl class="settings">
-        <dt>Feature flag</dt><dd><code>domain-handoff-guide</code></dd>
-        <dt>Audience &amp; exposure</dt><dd>First-time owners in a simulated setup. Assign each person once when their guide opens. Both groups get the same fictional task and follow-up question.</dd>
-        <dt>Variants</dt><dd><b>50% control</b> · Published instructions<br><b>50% test</b> · Revised guide with annotated screenshots and self-checks</dd>
-        <dt>Primary metric</dt><dd>Share of exposed participants whose first answer identifies <em>both</em> outcomes: they can leave after the records match, and Squarespace confirms the connection. Within 30 minutes of exposure, count each participant once. Missing answers stay in the denominator.</dd>
-        <dt>Proposed event</dt><dd><code>handoff_answered</code> with <code>attempt = 1</code> and <code>correct = true</code>, scored against the two outcomes above.</dd>
-        <dt>Secondary checks</dt><dd>Track first-attempt key accuracy and how many people leave without answering. Keep practice values out of event data.</dd>
-      </dl>
-      <p class="test-decision"><b>Decision.</b> I’d favor the revision if more people understand the handoff without making more key-entry errors. If the sample is too small to distinguish the variants, I’d use the screen-share observations to plan another test.</p>
-      <a class="textlink" href="https://posthog.com/docs/experiments/creating-an-experiment">PostHog setup reference ↗</a>
-    </div>
+    <p><strong>Before building it,</strong> Engineering would need to establish whether Name.com can reliably detect Squarespace’s verified status for that domain. Without that signal, I’d keep the guide’s check-back instructions. With it, send once per verified connection to an owner who opted in.</p>
   </section>
   <section class="chapter" id="handoff">
-    <h2>What the team needs before release</h2>
-    <p><b>Acceptance criteria.</b> After a failed save, the guide tells the reader how to check what was retained. After a successful save, it identifies which records to compare. It reserves “Connected” for the state Squarespace verifies.</p>
-    <p>I’d ask Support for examples of questions that came in after a successful save. If customers can copy the key but still contact Support to ask whether they’re done, I’d test guidance on the confirmation screen itself.</p>
-    <p>Before release I’d check that the instructions work with a keyboard and with images off, and that the field names still match both services. The proposed tests haven’t been run.</p>
+    <h2>What I’d hand off</h2>
+    <p><strong>For the guide,</strong> I’d give the help-center editor the revised article, the two provider references, and three acceptance criteria. A reader can recover from a failed save, identify the six records to compare, and find the verified status in Squarespace. Before publishing, we’d walk through those steps with a keyboard and with images off.</p>
+    <p><strong>After release,</strong> I’d ask Support to sample new questions about this step and compare them with the questions we saw before. If owners still ask whether they’re done, I’d check which instructions they actually saw.</p>
+    <p><strong>If the problem persists at the save screen,</strong> I’d bring Design and Engineering a proposal to test a link to the guide or a short next-step message at that point. The opt-in email would be a separate decision, based on demand and a reliable way to verify the connection.</p>
   </section>
   </div></div></div>
     <section class="shell sources" id="sources"><h2>Provider sources</h2><div>

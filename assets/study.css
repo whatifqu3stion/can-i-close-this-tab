@@ -191,8 +191,14 @@ code { font: .87em var(--mono); overflow-wrap: anywhere; }
 .quote-mark { position: absolute; left: 0; top: 4px; color: #397255; font: 84px/1 Georgia, serif; }
 .author-note blockquote { margin: 0; max-width: 43ch; font: 500 clamp(22px, 2vw, 28px)/1.38 var(--sans); letter-spacing: -.015em; }
 .author-note figcaption { margin-top: 8px; color: var(--muted); font: 13px/1.5 var(--mono); }
-.chapter .guide-excerpt { max-width: none; margin: 22px 0; padding: 14px 18px; background: #dbe8d9; border-left: 3px solid #467455; font-size: 20px; }
-.guide-excerpt b { display: block; margin-bottom: 5px; font: 13px/1.5 var(--mono); }
+.guide-comparison { margin: 22px 0; display: grid; grid-template-columns: 0.85fr 1.15fr; }
+.guide-comparison > div { padding: 17px 20px; background: var(--paper); }
+.guide-comparison > div + div { background: #dbe8d9; }
+.guide-comparison dt { margin-bottom: 7px; font: 13px/1.5 var(--mono); color: var(--forest); }
+.guide-comparison dd { margin: 0; }
+@media (max-width: 600px) {
+  .guide-comparison { grid-template-columns: 1fr; }
+}
 .experiment { margin-top: 26px; padding: clamp(16px, 2.5vw, 28px); background: var(--paper); border: 1px solid var(--line); scroll-margin-top: 20px; }
 .experiment-head { display: flex; align-items: baseline; justify-content: space-between; gap: 6px 16px; flex-wrap: wrap; }
 .experiment-head h3 { margin: 0; font-size: 24px; font-weight: 500; letter-spacing: -.02em; }
