@@ -125,7 +125,7 @@ code { font: .87em var(--mono); overflow-wrap: anywhere; }
 .sources a { display: block; width: fit-content; font-size: 16px; margin-block: 3px; }
 .foot { color: var(--paper); background: var(--ink); }
 .foot .shell { display: flex; align-items: center; flex-wrap:wrap; justify-content: space-between; gap: 20px; padding-block: 20px; font-size: 14px; }
-.guide-layout { display: grid; grid-template-columns: 240px minmax(0, 685px); gap: clamp(28px,6vw,90px); padding-block: 54px 76px; }
+.guide-layout { display: grid; max-width: 984px; grid-template-columns: clamp(168px, 16vw, 220px) minmax(0, 1fr); gap: clamp(28px, 4.5vw, 64px); padding-block: clamp(28px, 4vw, 54px) clamp(36px, 5vw, 64px); }
 .guide-layout .rail-content { position: sticky; top: 24px; }
 .guide-layout aside nav { display: grid; gap: 11px; }
 .guide-layout aside span { color: var(--muted); margin-bottom: 5px; }
@@ -176,15 +176,21 @@ code { font: .87em var(--mono); overflow-wrap: anywhere; }
 .lesson .prereq h2, .lesson .guide-sources h2 { margin: 0 0 6px; font-size: 20px; }
 .lesson .prereq p, .lesson .guide-sources p { margin: 0; }
 .lesson-step, .lesson .prereq, .guide-sources { scroll-margin-top: 22px; }
-.lesson h3 { margin: 22px 0 5px; font-size: 20px; font-weight: 600; line-height: 1.35; }
-.lesson .guide-shot { margin: 16px 0 20px; border: 0; }
+.lesson h3 { margin: clamp(22px, 2.3vw, 30px) 0 6px; font-size: 20px; font-weight: 600; line-height: 1.35; }
+.lesson-step { margin-top: clamp(40px, 4vw, 56px); }
+.lesson-step > h2 { margin: 0 0 12px; }
+.lesson-step > h2 + h3 { margin-top: 14px; }
+.lesson-step > h3 + p { margin-top: 6px; }
+.lesson .guide-shot { margin: 12px 0 18px; border: 0; }
+.lesson-step > :last-child { margin-bottom: 0; }
 .guide-shot a.plate, .guide-shot .crop { display: block; }
-.guide-shot .plate { padding: clamp(12px, 2vw, 22px); }
+.guide-shot .plate { padding: clamp(10px, 1.2vw, 16px); }
 .guide-shot figcaption { padding: 7px 0 0; font-size: 15px; line-height: 1.5; color: var(--muted); }
 .guide-shot figcaption a { display: inline-block; color: var(--forest); }
 .self-check { margin: 19px 0; padding: 14px 18px; border-left: 3px solid #467455; background: #e4ece1; }
 .lesson .self-check h3 { margin: 0; font-size: 18px; }
-.lesson .self-check p { margin: 5px 0 0; }
+.lesson .self-check p { margin: 8px 0 0; }
+.lesson .self-check p + p { margin-top: 14px; }
 .guide-sources { border-top: 1px solid var(--line); margin: 32px 0 19px; padding-top: 17px; }
 .verification-cells { display: none; }
 @media (max-width: 480px) {
@@ -237,5 +243,5 @@ code { font: .87em var(--mono); overflow-wrap: anywhere; }
   .guide-layout aside.guide-rail { display: block; order: 2; }
   .guide-layout .rail-content { position: static; }
   .guide-layout .guide-rail nav { display: none; }
-  .guide-changes { margin-top: 0; }
+  .guide-changes { margin-top: 12px; }
 }
