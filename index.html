@@ -110,7 +110,7 @@
   <path d="M12 5v16" />
   <path d="M20.001 19A2 2 0 0022 17V5a2 2 0 00-1.999-2L16 3.002A5 5 0 0012 5a5 5 0 00-4-2H4a2 2 0 00-2 2v12a2 2 0 001.999 2H8a5 5 0 014 2 5 5 0 014-2z" />
 </svg>
-<span>Choose the change</span></a><a href="#research"><svg aria-hidden="true" focusable="false"
+<span>Why a guide first?</span></a><a href="#research"><svg aria-hidden="true" focusable="false"
   class="lucide lucide-flask-conical"
   xmlns="http://www.w3.org/2000/svg"
   width="24"
@@ -216,8 +216,8 @@
     <p>I used AI to compare the providers’ instructions, then checked the field labels against their published screenshots. That’s why the guide points to the row for <code>verify.squarespace.com</code> as well as naming the column. I kept the template shortcut that prepares all six website records.</p>
   </section>
   <section class="chapter" id="proposal">
-    <h2>Start with the help article</h2>
-    <p>I started with the guide because I could test clearer instructions within the existing workflow. I organized the steps around what the owner needs to do in each tab, paired unfamiliar field names with screenshots, and put the overwrite warning before Save. After saving, readers get a way to tell whether they’re done and a next step for either outcome.</p>
+    <h2>Why I’d test the guide first</h2>
+    <p>A guide lets me test whether clearer instructions are enough before asking the team to change the save screen. I organized the steps around what the owner needs to do in each tab, paired unfamiliar field names with screenshots, and put the overwrite warning before Save. After saving, readers get a way to tell whether they’re done and a next step for either outcome.</p>
     <dl class="guide-comparison">
       <div><dt>Where the template instructions end</dt><dd><strong>Update DNS Records</strong> is the last action in <a href="https://www.name.com/support/articles/206127137-adding-dns-records-and-templates">Name.com’s template instructions</a>.</dd></div>
       <div><dt>What the revised guide adds</dt><dd>Compare the six saved website records with your Squarespace list. If they match, you can close Name.com. Later, look for <strong>Connected</strong> in Squarespace.</dd></div>
@@ -241,15 +241,17 @@
   </section>
   <section class="chapter" id="research">
     <h2>Test what people think happened</h2>
-    <p>I’d start with the existing instructions and a fictional setup. Two people could enter the same code and click Save, yet only one might know that verification is still pending. After they finish, I’d ask, “If you closed the laptop now, what would you expect to happen? Where would you check?”</p>
+    <p>I’d ask a first-time owner to follow the current instructions in a fictional setup. After they save, I’d ask, “If you closed the laptop now, what would you expect to happen? Where would you check?”</p>
+    <h3 class="decision-heading">What would change my next step?</h3>
     <dl class="decision-list">
-      <dt>Wrong value entered</dt><dd>Try a still showing the two fields together. Give the next participant a fresh code and see whether they can identify it unaided.</dd>
-      <dt>Correct save, wrong expectation</dt><dd>Test the guide’s new ending. If people understand it but miss it while setting up their domain, try the same guidance on the save screen.</dd>
-      <dt>Both steps understood</dt><dd>Keep the current guidance and investigate another step.</dd>
+      <dt>Wrong value entered</dt><dd>Test a screenshot that labels both fields. Give the next participant a fresh key to find unaided.</dd>
+      <dt>Correct save, wrong expectation</dt><dd>Test the revised ending. If owners understand it but miss the guide during setup, try the guidance on the save screen.</dd>
+      <dt>Both steps understood</dt><dd>Keep the current instructions. I’d move on if owners already know when they can leave and where to check.</dd>
     </dl>
     <div class="experiment" id="experiment" aria-labelledby="experiment-title">
       <div class="experiment-head"><h3 id="experiment-title">PostHog experiment plan</h3><span>Proposed · Never run</span></div>
-      <p>Does the revised guide help first-time owners recognize when they can leave Name.com and where to check the connection?</p>
+      <p><strong>I’d favor the revised guide</strong> if more first-time owners can explain when to leave and where to check, without making more key-entry errors. I’d run the comparison only with enough participants to tell the guides apart.</p>
+      <details class="experiment-settings"><summary>View proposed experiment settings</summary>
       <dl class="settings">
         <dt>Feature flag</dt><dd><code>domain-handoff-guide</code></dd>
         <dt>Audience &amp; exposure</dt><dd>First-time owners in a simulated setup. Assign each person once when their guide opens. Both groups get the same fictional task and follow-up question.</dd>
@@ -258,8 +260,9 @@
         <dt>Proposed event</dt><dd><code>handoff_answered</code> with <code>attempt = 1</code> and <code>correct = true</code>, recorded after a reviewer scores the answer against the same two criteria, without seeing the assigned variant.</dd>
         <dt>Secondary checks</dt><dd>Track first-attempt key accuracy and how many people leave without answering. Keep practice values out of event data.</dd>
       </dl>
-      <p class="test-decision"><b>Decision.</b> I’d run the A/B test only with enough participants to compare the guides. I’d favor the revision if it improves comprehension without increasing key-entry errors. This measures understanding in a simulated task. A live rollout would need its own follow-up.</p>
+      <p>This comparison measures understanding in a simulated task. The post-release follow-up would check what happens during real setups.</p>
       <a class="textlink" href="https://posthog.com/docs/experiments/creating-an-experiment">PostHog setup reference ↗</a>
+      </details>
     </div>
   </section>
   <section class="chapter" id="email">

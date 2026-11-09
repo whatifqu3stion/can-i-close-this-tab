@@ -113,7 +113,8 @@ svg.lucide { width: 18px; height: 18px; vertical-align: -.18em; flex-shrink: 0; 
 .email-help { border-top:1px solid var(--line); padding-top:14px; font-size:16px; }
 .email-help p { margin:3px 0 0; }
 .email-help a { color:var(--forest); }
-.decision-list { margin:20px 0; display:grid; grid-template-columns:minmax(135px, .8fr) 1.65fr; }
+.decision-heading { margin: 24px 0 8px; font-size: 21px; font-weight: 500; }
+.decision-list { margin:8px 0 20px; display:grid; grid-template-columns:minmax(135px, .8fr) 1.65fr; }
 .decision-list dt, .decision-list dd { border-top:1px solid var(--line); padding:12px 0; }
 .decision-list dt { padding-right:16px; font-weight:600; }
 .decision-list dd { margin:0; }
@@ -185,10 +186,16 @@ code { font: .87em var(--mono); overflow-wrap: anywhere; }
 .lesson .self-check h3 { margin: 0; font-size: 18px; }
 .lesson .self-check p { margin: 5px 0 0; }
 .guide-sources { border-top: 1px solid var(--line); margin: 32px 0 19px; padding-top: 17px; }
+.verification-cells { display: none; }
 @media (max-width: 480px) {
-  /* Keep the source value readable; the full table opens from the image. */
-  .lesson .source .crop img { width: 190%; }
-  .lesson .source .mark { left: 1.9%; width: 64.6%; }
+  .lesson .source .crop { display: none; }
+  .lesson .source .plate { text-decoration: none; }
+  .verification-cells { display: grid; gap: 12px; color: var(--forest); font: 500 15px/1.4 var(--sans); }
+  .verification-cell { display: block; position: relative; width: 240px; max-width: 100%; height: 124px; margin-top: 4px; overflow: hidden; }
+  /* Two cells from the same published row, shown at a legible scale. */
+  .verification-cell img { position: absolute; top: 0; width: auto; max-width: none; height: 124px; }
+  .required-cell img { right: 0; }
+  .host-cell img { left: 0; }
 }
 
 .author-note { position: relative; margin: 25px 0; padding: 14px 16px 14px 50px; }
@@ -208,6 +215,9 @@ code { font: .87em var(--mono); overflow-wrap: anywhere; }
 .experiment-head h3 { margin: 0; font-size: 24px; font-weight: 500; letter-spacing: -.02em; }
 .experiment-head span { color: var(--muted); font: 12px/1.6 var(--mono); }
 .experiment p { margin: 12px 0; }
+.experiment-settings { margin-top: 16px; border-top: 1px solid var(--line); }
+.experiment-settings summary { padding: 12px 0 4px; color: var(--forest); font-weight: 500; cursor: pointer; }
+.experiment-settings summary:hover { text-decoration: underline; }
 .settings { display: grid; grid-template-columns: minmax(130px,.7fr) 2fr; margin: 18px 0; }
 .settings dt, .settings dd { margin: 0; padding: 10px 0; border-top: 1px solid var(--line); font-size: 16px; }
 .settings dt { padding-right: 14px; font-weight: 600; }
